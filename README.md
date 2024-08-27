@@ -2,7 +2,7 @@
 
 *** this readme is written by cursor ***
 
-[![Cursor Composer and Claude AI](og.png)](https://prototypr.io/post/cursor-composer-cmdi)
+[![Cursor Composer and Claude AI](https://prototyprio.gumlet.io/strapi/6040af8299dd9d917526b07e6d238395.png?w=1080&q=70&format=avif&compress=true&dpr=1)](https://prototypr.io/post/cursor-composer-cmdi)
 
 This project demonstrates how to create an app using AI tools like Cursor Composer and Claude. It's based on the concepts discussed in the article ["What's Cursor Composer? How to Build Full Apps with AI"](https://prototypr.io/post/cursor-composer-cmdi) by Graeme Fulton.
 
