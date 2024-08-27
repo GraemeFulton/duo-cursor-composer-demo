@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import HeartTracker from './HeartTracker';
+import { motion, AnimatePresence, Reorder } from 'framer-motion';
 
 const phrases = [
   { 
@@ -94,6 +95,11 @@ export default function LanguageLearningGame() {
     setAvailableWords(availableWords.filter(w => w !== word));
   };
 
+  const handleSelectedWordClick = (word) => {
+    setUserAnswer(userAnswer.filter(w => w !== word));
+    setAvailableWords([...availableWords, word].sort(() => Math.random() - 0.5));
+  };
+
   const checkAnswer = () => {
     const isCorrect = userAnswer.join(' ') === phrases[currentPhraseIndex].english;
     setIsCorrect(isCorrect);
@@ -133,22 +139,44 @@ export default function LanguageLearningGame() {
           <span className="text-blue-500 mr-2">🔊</span> {phrases[currentPhraseIndex].spanish}
         </div>
       </div>
-      <div className="flex flex-wrap gap-2 mb-6">
-        {userAnswer.map((word, index) => (
-          <button key={index} className="bg-white border-2 border-gray-300 rounded-2xl px-4 py-2">
-            {word}
-          </button>
-        ))}
-      </div>
+      <Reorder.Group axis="x" values={userAnswer} onReorder={setUserAnswer} className="flex flex-wrap gap-2 mb-6 min-h-[50px]">
+        <AnimatePresence>
+          {userAnswer.map((word) => (
+            <Reorder.Item key={word} value={word} className="relative">
+              <motion.div
+                layout
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                transition={{
+                  opacity: { duration: 0.2 },
+                  layout: { duration: 0.2, type: "spring", stiffness: 300, damping: 30 }
+                }}
+              >
+                <motion.button 
+                  className="bg-white border-2 border-gray-300 rounded-2xl px-4 py-2 hover:bg-gray-100 cursor-move"
+                  onClick={() => handleSelectedWordClick(word)}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {word}
+                </motion.button>
+              </motion.div>
+            </Reorder.Item>
+          ))}
+        </AnimatePresence>
+      </Reorder.Group>
       <div className="flex flex-wrap gap-2 mb-6">
         {availableWords.map((word, index) => (
-          <button 
-            key={index} 
+          <motion.button 
+            key={index}
             className="bg-white border-2 border-gray-300 rounded-2xl px-4 py-2 hover:bg-gray-100"
             onClick={() => handleWordClick(word)}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
             {word}
-          </button>
+          </motion.button>
         ))}
       </div>
       <button 
@@ -164,5 +192,4 @@ export default function LanguageLearningGame() {
       )}
     </div>
   );
-
 }
