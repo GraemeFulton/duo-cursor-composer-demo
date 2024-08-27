@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AI-Powered App Demo: Cursor Composer & Claude
+
+*** this readme is written by cursor ***
+
+[![Cursor Composer and Claude AI](og.png)](https://prototypr.io/post/cursor-composer-cmdi)
+
+This project demonstrates how to create an app using AI tools like Cursor Composer and Claude. It's based on the concepts discussed in the article ["What's Cursor Composer? How to Build Full Apps with AI"](https://prototypr.io/post/cursor-composer-cmdi) by Graeme Fulton.
+
+## About Cursor Composer
+
+Cursor Composer is a powerful feature in the Cursor editor that allows developers to create multi-file applications using AI assistance. It can significantly speed up the development process by handling boilerplate code and complex implementations.
+
+Key features:
+- Multi-file editing
+- AI-powered code generation
+- Accessible via keyboard shortcuts (CMD+I or CMD+SHIFT+I)
 
 ## Getting Started
 
-First, run the development server:
+To use Cursor Composer:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Install Cursor editor
+2. Enable Composer in Cursor Settings
+3. Use CMD+I or CMD+SHIFT+I to access Composer
+4. Provide instructions to generate your app
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Structure
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This demo app was created using Cursor Composer and Next.js. It showcases how AI can assist in rapidly prototyping and developing web applications.
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To dive deeper into Cursor Composer and AI-assisted development:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Read the full article on [Prototypr.io](https://prototypr.io/post/cursor-composer-cmdi)
+- Explore [Cursor editor](https://cursor.sh/)
+- Check out [Claude AI](https://www.anthropic.com/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+For a quick deployment option, consider using [Replit](https://replit.com/) as suggested in the article.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project aims to demonstrate the potential of AI-assisted development. Feel free to explore, modify, and build upon this demo!
