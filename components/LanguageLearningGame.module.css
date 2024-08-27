@@ -1,0 +1,61 @@
+.gameContainer {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.progressBar {
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.progress {
+  height: 100%;
+  background-color: #58cc02;
+  border-radius: 5px;
+}
+
+.questionContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.speechBubble {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  padding: 10px 15px;
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.audioIcon {
+  color: #1cb0f6;
+  margin-right: 5px;
+}
+
+.answerContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.wordButton {
+  background-color: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 15px;
+  padding: 8px 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.extraWords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
